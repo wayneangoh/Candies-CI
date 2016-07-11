@@ -24,3 +24,5 @@ app.set('view engine', 'ejs')
 app.get('/candies', (req, res) => {
   res.status(200).json([{'name': 'bon bon'}]);
 });
+
+module.exports = app
