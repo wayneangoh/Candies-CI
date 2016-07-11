@@ -33,16 +33,16 @@ describe('GET /candies', () => {
 describe('POST /candies', () => {
   before((done) => {
     api.post('/candies')
-       .set('Accept', 'application/json')
-       .send({ 'id': 5, 'name': 'lollipop', 'color': 'red'})
-       .end(done);
+      .set('Accept', 'application/json')
+      .send({
+        'id': 5, 'name': 'lollipop', 'color': 'red'})
+      .end(done);
   });
 
   it('should add a candy object to the collection and return it', (done) => {
     api.get('/candies')
        .set('Accept', 'application/json')
        .end((error, response) => {
-        //  console.log(response.body)
          expect(error).to.be.a('null');
          // expect(response.body.length).to.equal(5);
          expect(response.body[response.body.length - 1].name).to.equal('lollipop');
