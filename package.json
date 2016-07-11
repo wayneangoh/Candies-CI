@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "mocha"
   },
@@ -15,6 +15,9 @@
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0"
+  },
+  "engines": {
+    "node": "6.2.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
